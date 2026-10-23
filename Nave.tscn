@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b5c6d7e8f9a01"]
+
+[ext_resource type="Script" path="res://Nave.gd" id="1_nave"]
+[ext_resource type="Texture2D" path="res://assets/nave.svg" id="2_textura"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nave"]
+radius = 18.0
+
+[node name="Nave" type="Area2D"]
+script = ExtResource("1_nave")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_textura")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nave")

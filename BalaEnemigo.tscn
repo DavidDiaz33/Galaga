@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://e2b3c4d5e6f7a"]
+
+[ext_resource type="Script" path="res://BalaEnemigo.gd" id="1_bala_enemigo"]
+[ext_resource type="Texture2D" path="res://assets/bala_enemigo.svg" id="2_textura"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bala_enemigo"]
+size = Vector2(10, 18)
+
+[node name="BalaEnemigo" type="Area2D"]
+script = ExtResource("1_bala_enemigo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_textura")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bala_enemigo")
